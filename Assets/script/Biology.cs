@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Biology : MonoBehaviour
+public class Biology : Robot
 {
 	[SerializeField] private UnityEngine.UI.Image _HPImage, HPImage;
 	[SerializeField] private SpriteRenderer SpriteRenderer;
 	[SerializeField] private Animator Animator;
 	[SerializeField] private float shakeDuration, shakeAmount;
+
 	private float _shakeDuration;
 	private UnityEngine.Coroutine ShakeCoroutine;
 	private Material _Material;
@@ -16,13 +17,16 @@ public class Biology : MonoBehaviour
 
 	private float curHealth = 1f;
 
-	[SerializeField] private Robot robot;
+	private Robot robot;
+
+	[SerializeField] private  GameObject menu;
 
 	// Start is called before the first frame update
-	void Start()
+	protected override void Start()
 	{
-
+		robot = this;
 		SpriteRenderer.material = Instantiate(SpriteRenderer.material);
+		menu.SetActive(false);
 	}
 
 	// Update is called once per frame
@@ -90,7 +94,6 @@ public class Biology : MonoBehaviour
 		}
 
 	}
-
 
 
 	IEnumerator IEnumeratorShake()

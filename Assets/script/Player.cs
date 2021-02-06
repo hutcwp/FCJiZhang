@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : Robot
 {
 
+   
 
     // Start is called before the first frame update
     protected override void Start()
@@ -18,5 +19,6 @@ public class Player : Robot
     {
         
     }
+
 
 }

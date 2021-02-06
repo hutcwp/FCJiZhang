@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2935134637308315750}
   - component: {fileID: 2935134637308315752}
   - component: {fileID: 2935134637308315751}
-  - component: {fileID: 2935134637308315753}
   - component: {fileID: 2935134637308315754}
   m_Layer: 8
   m_Name: player
@@ -180,33 +179,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2935134637308315753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935134637308315749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b402d4ddb11e147ee9a24f7793ab4669, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: 0.4
-  moveDistance: 4
-  moveSpeed: 5
-  attackDistance: 2
-  moveableList: []
-  attackableList: []
-  status: 0
-  robotType: 0
-  health: 300
-  maxHealth: 500
-  attack: 70
-  hasMoved: 0
-  originPos: {x: 0, y: 0, z: 0}
-  waitColor: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
-  healthBar: {fileID: 0}
 --- !u!61 &2935134637308315754
 BoxCollider2D:
   m_ObjectHideFlags: 0

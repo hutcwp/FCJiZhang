@@ -33,18 +33,16 @@ public abstract class Robot : MonoBehaviour
     public bool hasMoved = false; //是否已经移动过，本回合
     public Vector3 originPos;
 
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     public Color waitColor;
 
-
-    public HealthBar healthBar;
 
     // Start is called before the first frame update
     protected virtual void Start()
     {
         //healthBar.SetUp(this);
 
-        spriteRenderer = GetComponent<SpriteRenderer>();
+     
         Debug.Log("Start spriteRenderer="+ spriteRenderer);
         ShowMoveAviable(false);
         originPos = transform.position;
@@ -60,7 +58,6 @@ public abstract class Robot : MonoBehaviour
     private void OnMouseDown()
     {
         GameManager.instance.RobotMouseClick(this);
-
     }
 
     public float healthRate()
